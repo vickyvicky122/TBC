@@ -1,0 +1,9 @@
+.git
+api/.venv
+api/uv.lock
+web/node_modules
+web/.next
+**/__pycache__
+**/*.pyc
+.env
+.cognee*

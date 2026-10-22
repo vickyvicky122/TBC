@@ -1,0 +1,502 @@
+{
+  "disclaimer": "Grok Bot Community Engineering London Hackathon partner names are confirmed from the public partner list. Invented contacts, offers, ratings and conditions are labelled demo. Participation in the Grok Bot hackathon does not establish availability for Impact Hack.",
+  "events": [
+    {
+      "id": "impact-hack-bristol",
+      "slug": "impact-hack-bristol",
+      "name": "Impact Hack",
+      "community": "Impact Hack committee \u00b7 University of Bristol",
+      "contact": {
+        "name": "Maya Chen",
+        "role": "Partnerships Lead",
+        "email": "sponsors@impact-hack.com",
+        "demo": true
+      },
+      "purpose": "24-hour student-led hack for real-world data and AI challenges.",
+      "date": "13\u201314 February 2027",
+      "dateDemo": true,
+      "location": "Bristol & Mumbai",
+      "expectedAttendance": 300,
+      "attendanceDemo": true,
+      "audience": "300+ student hackers across Bristol and Mumbai.",
+      "supportRequested": [
+        "funding",
+        "credits",
+        "mentors",
+        "prizes",
+        "venue"
+      ],
+      "benefitsOffered": [
+        "Logo and stage mention",
+        "Named challenge track",
+        "Recruitment table",
+        "Tool workshop slot",
+        "Post-event write-up"
+      ],
+      "applicationDeadline": "16 January 2027",
+      "deadlineDemo": true,
+      "tracks": [
+        "AI for public services",
+        "Climate and energy",
+        "Health and care",
+        "Civic tech",
+        "Open data"
+      ],
+      "leadTimeWeeks": 8,
+      "rating": 4.6,
+      "pastEvents": [
+        {
+          "name": "Impact Build Night 2025",
+          "role": "organiser",
+          "demo": true
+        }
+      ],
+      "prospectusId": "impact-hack",
+      "submitted": true,
+      "demo": true,
+      "oneLine": "Need catering, credits and mentors for 300 builders on two campuses.",
+      "prospectusCover": "/prospectus/impact-hack-cover.png"
+    },
+    {
+      "id": "uob-ai-build-night",
+      "slug": "uob-ai-build-night",
+      "name": "UoB AI Society Build Night",
+      "community": "University of Bristol AI Society",
+      "contact": {
+        "name": "Jordan Hale",
+        "role": "Society President",
+        "email": "ai-soc@bristol.demo",
+        "demo": true
+      },
+      "purpose": "Evening build session for students shipping small AI tools with society mentors.",
+      "date": "12 November 2026",
+      "dateDemo": true,
+      "location": "University of Bristol",
+      "expectedAttendance": 40,
+      "attendanceDemo": true,
+      "audience": "CS and engineering undergraduates interested in applied AI.",
+      "supportRequested": [
+        "credits",
+        "mentors",
+        "prizes"
+      ],
+      "benefitsOffered": [
+        "Logo on event page",
+        "Short product demo",
+        "Campus mailing list mention"
+      ],
+      "applicationDeadline": "1 November 2026",
+      "deadlineDemo": true,
+      "tracks": [
+        "Applied AI",
+        "Developer tools"
+      ],
+      "leadTimeWeeks": 3,
+      "rating": 4.1,
+      "pastEvents": [],
+      "submitted": true,
+      "demo": true,
+      "oneLine": "Need credits and a mentor block for a campus AI night."
+    },
+    {
+      "id": "temple-quarter-lab",
+      "slug": "temple-quarter-lab",
+      "name": "Temple Quarter Lab",
+      "community": "UoB Temple Quarter builders",
+      "contact": {
+        "name": "Asha Rahman",
+        "role": "Lab lead",
+        "email": "lab@templequarter.demo",
+        "demo": true
+      },
+      "purpose": "Evening lab at the new campus for civic-tech prototypes.",
+      "oneLine": "Need a workshop host and snack sponsor for 80 students.",
+      "date": "4 March 2027",
+      "dateDemo": true,
+      "location": "Bristol, Temple Quarter",
+      "expectedAttendance": 80,
+      "attendanceDemo": true,
+      "audience": "Students shipping civic and climate tools.",
+      "supportRequested": [
+        "funding",
+        "mentors",
+        "prizes"
+      ],
+      "benefitsOffered": [
+        "Logo on lab walls",
+        "Opening mention"
+      ],
+      "applicationDeadline": "10 February 2027",
+      "deadlineDemo": true,
+      "tracks": [
+        "Civic tech",
+        "Climate and energy"
+      ],
+      "leadTimeWeeks": 6,
+      "rating": 4.2,
+      "pastEvents": [],
+      "submitted": true,
+      "demo": true
+    },
+    {
+      "id": "mumbai-impact-satellite",
+      "slug": "mumbai-impact-satellite",
+      "name": "Impact Hack Mumbai",
+      "community": "Mumbai Enterprise Campus cohort",
+      "contact": {
+        "name": "Devika Shah",
+        "role": "Campus lead",
+        "email": "mumbai@impacthack.demo",
+        "demo": true
+      },
+      "purpose": "Mumbai campus of the two-continent Impact Hack weekend.",
+      "oneLine": "Need travel support and a named Mumbai challenge track.",
+      "date": "13\u201314 February 2027",
+      "dateDemo": true,
+      "location": "Mumbai Enterprise Campus",
+      "expectedAttendance": 150,
+      "attendanceDemo": true,
+      "audience": "Student hackers in Mumbai using data science and AI.",
+      "supportRequested": [
+        "funding",
+        "credits",
+        "prizes",
+        "mentors"
+      ],
+      "benefitsOffered": [
+        "Co-branding",
+        "CV list of opted-in participants"
+      ],
+      "applicationDeadline": "20 January 2027",
+      "deadlineDemo": true,
+      "tracks": [
+        "Health and care",
+        "AI for public services",
+        "Open data"
+      ],
+      "leadTimeWeeks": 8,
+      "rating": 4.5,
+      "pastEvents": [
+        {
+          "name": "Campus day hack 2026",
+          "role": "organiser",
+          "demo": true
+        }
+      ],
+      "prospectusCover": "/prospectus/impact-hack-cover.png",
+      "submitted": true,
+      "demo": true
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "cognee",
+      "name": "Cognee",
+      "kind": "technology",
+      "source": "Grok Bot Community Engineering London Hackathon technology partner",
+      "sourceConfirmed": true,
+      "contact": {
+        "name": "Veljko Kovac",
+        "role": "Partner connection (Grok Bot list)",
+        "email": "partnerships@cognee.demo",
+        "demoEmail": true
+      },
+      "goals": "Help builder communities persist event, sponsor and people knowledge in a queryable graph, and meet developers who will use AI memory in production.",
+      "targetAudience": "Hackathon organisers, AI/agent builders, university technical societies.",
+      "minRequirements": "Developer-heavy audience; a workshop or named track; 40+ technical attendees.",
+      "supportAvailable": [
+        "credits",
+        "mentors",
+        "prizes"
+      ],
+      "limits": "API / platform credits and 2 mentor-hours per event (demo limits).",
+      "benefitsExpected": [
+        "Tool promotion in opening remarks",
+        "Workshop slot on knowledge graphs",
+        "Opt-in talent list"
+      ],
+      "tracksLookingFor": [
+        "Knowledge graphs",
+        "AI agents",
+        "AI for public services"
+      ],
+      "leadTimeWeeks": 4,
+      "rating": 4.8,
+      "pastEvents": [
+        {
+          "name": "Grok Bot Community Engineering London Hackathon",
+          "role": "technology partner",
+          "confirmed": true
+        }
+      ],
+      "demo": true,
+      "tagline": "Graph memory for builder weekends."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "kind": "technology",
+      "source": "Grok Bot Community Engineering London Hackathon technology partner",
+      "sourceConfirmed": true,
+      "contact": {
+        "name": "Francisco Terpolilli",
+        "role": "EU Ambassador (Grok Bot list)",
+        "email": "community@cursor.demo",
+        "demoEmail": true
+      },
+      "goals": "Meet student and community engineers who ship with AI coding agents, and sponsor events that treat the editor as part of the stack.",
+      "targetAudience": "Builders using AI-assisted coding; university and community hackathons.",
+      "minRequirements": "In-person or hybrid build time; mention in participant comms.",
+      "supportAvailable": [
+        "credits",
+        "mentors",
+        "prizes",
+        "funding"
+      ],
+      "limits": "Pro seats / credits for registered hackers plus one staff mentor (demo limits).",
+      "benefitsExpected": [
+        "Logo",
+        "Workshop or office hours",
+        "Recruitment conversations"
+      ],
+      "tracksLookingFor": [
+        "Developer tools",
+        "AI agents",
+        "Civic tech"
+      ],
+      "leadTimeWeeks": 6,
+      "rating": 4.9,
+      "pastEvents": [
+        {
+          "name": "Grok Bot Community Engineering London Hackathon",
+          "role": "technology partner",
+          "confirmed": true
+        }
+      ],
+      "demo": true,
+      "tagline": "Agentic coding for student teams."
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "kind": "technology",
+      "source": "Grok Bot Community Engineering London Hackathon technology partner",
+      "sourceConfirmed": true,
+      "contact": {
+        "name": "Isabelle Roser",
+        "role": "Partner connection (Grok Bot list)",
+        "email": "devrel@supabase.demo",
+        "demoEmail": true
+      },
+      "goals": "Give student teams a backend they can ship on, and find developers who will keep using Postgres + auth after the weekend.",
+      "targetAudience": "Full-stack student hackers and society build nights.",
+      "minRequirements": "Teams shipping products; a credits redemption flow.",
+      "supportAvailable": [
+        "credits",
+        "mentors",
+        "prizes"
+      ],
+      "limits": "Hackathon credit codes; 1 async mentor channel (demo).",
+      "benefitsExpected": [
+        "Logo",
+        "Starter template mention",
+        "Campus ambassador intro"
+      ],
+      "tracksLookingFor": [
+        "Applied AI",
+        "Civic tech",
+        "Health and care"
+      ],
+      "leadTimeWeeks": 3,
+      "rating": 4.7,
+      "pastEvents": [
+        {
+          "name": "Grok Bot Community Engineering London Hackathon",
+          "role": "technology partner",
+          "confirmed": true
+        }
+      ],
+      "demo": true,
+      "tagline": "Ship a backend before sunrise."
+    },
+    {
+      "id": "zero",
+      "name": "Zero",
+      "kind": "technology",
+      "source": "Grok Bot Community Engineering London Hackathon technology partner",
+      "sourceConfirmed": true,
+      "contact": {
+        "name": "Mariia Nedelkina",
+        "role": "Partner connection (Grok Bot list)",
+        "email": "hello@zero.demo",
+        "demoEmail": true
+      },
+      "goals": "Visibility with community engineers and early design partners from university hackathons (demo goal).",
+      "targetAudience": "Community organisers and product-minded student builders.",
+      "minRequirements": "Audience of organisers or product builders; 30+ attendees.",
+      "supportAvailable": [
+        "mentors",
+        "prizes"
+      ],
+      "limits": "One mentor and prize credits (demo).",
+      "benefitsExpected": [
+        "Logo",
+        "Product demo slot"
+      ],
+      "tracksLookingFor": [
+        "Developer tools",
+        "Community infrastructure"
+      ],
+      "leadTimeWeeks": 5,
+      "rating": 4.0,
+      "pastEvents": [
+        {
+          "name": "Grok Bot Community Engineering London Hackathon",
+          "role": "technology partner",
+          "confirmed": true
+        }
+      ],
+      "demo": true,
+      "tagline": "Campus design partners, early."
+    },
+    {
+      "id": "spacexai",
+      "name": "SpaceXAI (Grok Bot)",
+      "kind": "technology",
+      "source": "Grok Bot Community Engineering London Hackathon technology partner",
+      "sourceConfirmed": true,
+      "contact": {
+        "name": "Francisco Terpolilli",
+        "role": "EU Ambassador (Grok Bot list)",
+        "email": "eu@spacexai.demo",
+        "demoEmail": true
+      },
+      "goals": "Show Grok Bot as the context layer for community tooling, and meet organisers building event infrastructure.",
+      "targetAudience": "Community engineers, DevRels, hackathon organisers.",
+      "minRequirements": "Organiser or community-infra audience; live demo opportunity.",
+      "supportAvailable": [
+        "mentors",
+        "prizes",
+        "credits"
+      ],
+      "limits": "Bot seats for organising team (demo).",
+      "benefitsExpected": [
+        "Opening mention",
+        "Track for community infrastructure"
+      ],
+      "tracksLookingFor": [
+        "Community infrastructure",
+        "AI agents",
+        "Developer tools"
+      ],
+      "leadTimeWeeks": 4,
+      "rating": 4.5,
+      "pastEvents": [
+        {
+          "name": "Grok Bot Community Engineering London Hackathon",
+          "role": "host technology",
+          "confirmed": true
+        }
+      ],
+      "demo": true,
+      "tagline": "Context layer for community tools."
+    },
+    {
+      "id": "expedite",
+      "name": "Expedite",
+      "kind": "venue",
+      "source": "Grok Bot Community Engineering London Hackathon venue partner",
+      "sourceConfirmed": true,
+      "contact": {
+        "name": "William Schulz",
+        "role": "Venue partner (Grok Bot list)",
+        "email": "venue@expedite.demo",
+        "demoEmail": true
+      },
+      "goals": "Host high-signal builder gatherings in London and meet community organisers who might return.",
+      "targetAudience": "Community engineering events in London.",
+      "minRequirements": "London location; evening or day-rate that fits HQ diary.",
+      "supportAvailable": [
+        "venue",
+        "mentors"
+      ],
+      "limits": "London HQ only \u2014 7 Lyric Square (confirmed venue for Grok Bot London). Bristol space is not listed.",
+      "benefitsExpected": [
+        "Event photography rights",
+        "Logo as venue partner"
+      ],
+      "tracksLookingFor": [
+        "Community infrastructure"
+      ],
+      "leadTimeWeeks": 8,
+      "rating": 4.4,
+      "pastEvents": [
+        {
+          "name": "Grok Bot Community Engineering London Hackathon",
+          "role": "venue host",
+          "confirmed": true
+        }
+      ],
+      "demo": true,
+      "tagline": "Rooms for high-signal build nights."
+    }
+  ],
+  "requests": [
+    {
+      "id": "req-demo1",
+      "eventId": "impact-hack-bristol",
+      "sponsorId": "cognee",
+      "initiatedBy": "organiser",
+      "status": "requested",
+      "terms": {
+        "funding": "",
+        "credits": "Platform credits for registered teams (demo).",
+        "venue": "",
+        "mentors": "One mentor block during the 24-hour build.",
+        "prizes": "Named challenge track prize.",
+        "promotion": "Logo on site and opening slide.",
+        "recruitment": "Opt-in talent intros.",
+        "notes": "Demo proposal. Not a real commitment."
+      },
+      "messages": [
+        {
+          "id": "m1",
+          "authorRole": "organiser",
+          "authorName": "Maya Chen",
+          "body": "Need catering, credits and mentors for 300 builders on two campuses.",
+          "createdAt": "2026-10-20T10:00:00+00:00"
+        }
+      ],
+      "createdAt": "2026-10-20T10:00:00+00:00",
+      "updatedAt": "2026-10-20T10:00:00+00:00"
+    },
+    {
+      "id": "req-demo2",
+      "eventId": "mumbai-impact-satellite",
+      "sponsorId": "supabase",
+      "initiatedBy": "organiser",
+      "status": "requested",
+      "terms": {
+        "funding": "Travel pool contribution (demo).",
+        "credits": "Hackathon credit codes.",
+        "venue": "",
+        "mentors": "",
+        "prizes": "Software credits as a non-monetary prize.",
+        "promotion": "Feature in pre-event outreach.",
+        "recruitment": "Job listings shared with candidates.",
+        "notes": "Demo proposal."
+      },
+      "messages": [
+        {
+          "id": "m2",
+          "authorRole": "organiser",
+          "authorName": "Devika Shah",
+          "body": "Need travel support and a named Mumbai challenge track.",
+          "createdAt": "2026-10-21T09:00:00+00:00"
+        }
+      ],
+      "createdAt": "2026-10-21T09:00:00+00:00",
+      "updatedAt": "2026-10-21T09:00:00+00:00"
+    }
+  ]
+}
