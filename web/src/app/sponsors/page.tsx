@@ -54,7 +54,7 @@ export default function SponsorsPage() {
           if (!sponsor) return null;
           return (
             <Link key={sponsor.id} href={`/sponsors/${sponsor.id}`}>
-              <Card className="h-full transition hover:border-navy/40">
+              <Card className="@container h-full transition hover:border-navy/40">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
                     <Monogram name={sponsor.name} src={sponsor.logoData} />
@@ -65,11 +65,9 @@ export default function SponsorsPage() {
                   </div>
                   <ProspectusThumb src={cover} className="h-20 w-14" />
                 </div>
-                <div className="mt-4 flex flex-nowrap items-center gap-3">
-                  <div className="min-w-0 max-w-[18rem] flex-1">
-                    <RadarChart scores={match.components || FALLBACK} />
-                  </div>
-                  <div className="ml-auto flex shrink-0 flex-col items-center gap-2">
+                <div className="mt-4 flex flex-col items-center gap-4 @min-[26rem]:flex-row @min-[26rem]:flex-nowrap @min-[26rem]:items-center @min-[26rem]:justify-between">
+                  <RadarChart scores={match.components || FALLBACK} />
+                  <div className="flex shrink-0 flex-col items-center gap-2">
                     <StarBadge value={sponsor.rating} />
                     <ScoreRing value={match.score} />
                   </div>

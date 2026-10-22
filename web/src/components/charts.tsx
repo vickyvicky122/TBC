@@ -23,7 +23,7 @@ export function RadarChart({ scores }: { scores: ComponentScores }) {
   const r = 62;
   const pts = AXES.map((axis, i) => polar(i, scores[axis.key], r, cx, cy).join(",")).join(" ");
   return (
-    <svg viewBox="0 0 180 180" className="mx-auto block h-auto w-full max-w-[18rem] min-w-0">
+    <svg viewBox="0 0 180 180" className="mx-auto block aspect-square w-[17rem] max-w-full shrink-0">
       {[0.35, 0.65, 1].map((scale) => (
         <polygon
           key={scale}

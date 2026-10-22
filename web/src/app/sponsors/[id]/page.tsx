@@ -98,11 +98,7 @@ export default function SponsorDetail({ params }: { params: Promise<{ id: string
           </div>
         </Card>
         <Card className="flex justify-center">
-          {match?.components ? (
-            <div className="w-full max-w-[18rem]">
-              <RadarChart scores={match.components} />
-            </div>
-          ) : null}
+          {match?.components ? <RadarChart scores={match.components} /> : null}
         </Card>
       </div>
 
