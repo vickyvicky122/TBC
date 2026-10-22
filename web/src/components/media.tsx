@@ -73,9 +73,9 @@ export function CircleDrop({
   return (
     <label
       aria-label={busy ? "Reading prospectus" : "Drop prospectus"}
-      className={`grid cursor-pointer place-items-center rounded-full border-2 border-dashed bg-transparent transition ${
+      className={`relative grid cursor-pointer place-items-center overflow-hidden rounded-full border-2 border-dashed transition ${
         compact ? "h-36 w-36" : "h-[min(72vmin,32rem)] w-[min(72vmin,32rem)]"
-      } ${over ? "border-orange scale-[1.02] shadow-[0_0_0_12px_rgba(226,75,36,0.18)]" : "border-ink/35"}`}
+      } ${over ? "border-orange scale-[1.02] shadow-[0_0_0_12px_rgba(255,93,95,0.28)]" : "border-ink/35"}`}
       onDragOver={(e) => {
         e.preventDefault();
         setOver(true);
@@ -88,7 +88,23 @@ export function CircleDrop({
         if (file) onFile(file);
       }}
     >
-      {busy ? <span className="text-xs text-muted">Reading</span> : <span className="sr-only">Drop prospectus</span>}
+      <img
+        src="/brand/circle.jpg"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover object-[center_68%]"
+      />
+      <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(239,235,227,0.88)_0%,rgba(239,235,227,0.28)_46%,rgba(239,235,227,0.05)_70%)]" />
+      {busy ? (
+        <span className="relative z-10 text-sm text-ink">Reading</span>
+      ) : (
+        <span
+          className={`display relative z-10 max-w-[11ch] text-center leading-[0.95] text-ink ${
+            compact ? "text-sm" : "text-4xl sm:text-5xl"
+          }`}
+        >
+          Upload prospectus
+        </span>
+      )}
       <input
         type="file"
         accept={accept}

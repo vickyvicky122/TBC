@@ -65,9 +65,11 @@ export default function SponsorsPage() {
                   </div>
                   <ProspectusThumb src={cover} className="h-20 w-14" />
                 </div>
-                <div className="mt-4 flex items-center justify-between gap-3">
-                  <RadarChart scores={match.components || FALLBACK} />
-                  <div className="flex flex-col items-end gap-3">
+                <div className="mt-4 flex flex-nowrap items-center gap-3">
+                  <div className="min-w-0 max-w-[18rem] flex-1">
+                    <RadarChart scores={match.components || FALLBACK} />
+                  </div>
+                  <div className="ml-auto flex shrink-0 flex-col items-center gap-2">
                     <StarBadge value={sponsor.rating} />
                     <ScoreRing value={match.score} />
                   </div>

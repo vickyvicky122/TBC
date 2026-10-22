@@ -23,7 +23,7 @@ export function RadarChart({ scores }: { scores: ComponentScores }) {
   const r = 62;
   const pts = AXES.map((axis, i) => polar(i, scores[axis.key], r, cx, cy).join(",")).join(" ");
   return (
-    <svg viewBox="0 0 180 180" className="h-40 w-40">
+    <svg viewBox="0 0 180 180" className="mx-auto block h-auto w-full max-w-[18rem] min-w-0">
       {[0.35, 0.65, 1].map((scale) => (
         <polygon
           key={scale}
@@ -32,7 +32,7 @@ export function RadarChart({ scores }: { scores: ComponentScores }) {
           points={AXES.map((_, i) => polar(i, 100 * scale, r, cx, cy).join(",")).join(" ")}
         />
       ))}
-      <polygon points={pts} fill="rgba(5,8,130,0.18)" stroke="#050882" strokeWidth="1.6" />
+      <polygon points={pts} fill="rgba(78,156,255,0.18)" stroke="#4e9cff" strokeWidth="1.6" />
       {AXES.map((axis, i) => {
         const [x, y] = polar(i, 118, r, cx, cy);
         return (
@@ -47,29 +47,29 @@ export function RadarChart({ scores }: { scores: ComponentScores }) {
 
 export function ScoreRing({ value }: { value: number }) {
   const pct = Math.max(0, Math.min(100, Math.round(value)));
-  const r = 18;
+  const r = 30;
   const c = 2 * Math.PI * r;
   const dash = (pct / 100) * c;
   return (
-    <span className="inline-flex flex-col items-center gap-0.5" title="Matching score">
-      <svg width="48" height="48" viewBox="0 0 48 48" aria-label={`${pct}% match`}>
-        <circle cx="24" cy="24" r={r} fill="none" stroke="#ddd6c8" strokeWidth="4" />
+    <span className="inline-flex flex-col items-center gap-1" title="Matching score">
+      <svg width="80" height="80" viewBox="0 0 80 80" aria-label={`${pct}% match`}>
+        <circle cx="40" cy="40" r={r} fill="none" stroke="#ddd6c8" strokeWidth="6" />
         <circle
-          cx="24"
-          cy="24"
+          cx="40"
+          cy="40"
           r={r}
           fill="none"
-          stroke="#050882"
-          strokeWidth="4"
+          stroke="#4e9cff"
+          strokeWidth="6"
           strokeDasharray={`${dash} ${c - dash}`}
           strokeLinecap="round"
-          transform="rotate(-90 24 24)"
+          transform="rotate(-90 40 40)"
         />
-        <text x="24" y="28" textAnchor="middle" fontSize="11" fontWeight="600" fill="#161616">
+        <text x="40" y="40" dominantBaseline="central" textAnchor="middle" fontSize="18" fontWeight="600" fill="#161616">
           {pct}
         </text>
       </svg>
-      <span className="text-[10px] uppercase tracking-wide text-muted">Match</span>
+      <span className="text-xs uppercase tracking-wide text-muted">Match</span>
     </span>
   );
 }

@@ -7,11 +7,11 @@
   --muted: #6a655c;
   --line: #ddd6c8;
   --card: #fffcf7;
-  --orange: #e24b24;
-  --orange-soft: #f4d3c8;
-  --blue: #050882;
-  --blue-soft: #9aa6ff;
-  --periwinkle: #c5c8f2;
+  --orange: #ff5d5f;
+  --orange-soft: #ffd6d7;
+  --blue: #4e9cff;
+  --blue-soft: #afd2ff;
+  --periwinkle: #d8e9ff;
 }
 
 @theme inline {
@@ -22,7 +22,7 @@
   --color-line: var(--line);
   --color-card: var(--card);
   --color-orange: var(--orange);
-  --color-navy: #050882;
+  --color-navy: var(--blue);
   --color-blue-soft: var(--blue-soft);
   --color-periwinkle: var(--periwinkle);
   --font-sans: var(--font-geist-sans);
@@ -32,8 +32,10 @@
   --font-display: var(--font-display);
 }
 
-* {
-  border-color: var(--line);
+@layer base {
+  * {
+    border-color: var(--line);
+  }
 }
 
 html,
@@ -101,36 +103,8 @@ body {
 }
 
 .drop-mark.is-over {
-  box-shadow: 0 0 0 12px rgba(226, 75, 36, 0.28);
+  box-shadow: 0 0 0 12px rgba(255, 93, 95, 0.28);
   transform: scale(1.02);
-}
-
-.pulse-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  animation: pulse-dot 1.4s ease-in-out infinite;
-}
-
-.pulse-dot:nth-child(2) {
-  animation-delay: 0.18s;
-}
-
-.pulse-dot:nth-child(3) {
-  animation-delay: 0.36s;
-}
-
-@keyframes pulse-dot {
-  0%,
-  100% {
-    transform: scale(0.7);
-    opacity: 0.45;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 1;
-  }
 }
 
 @keyframes spin-red {

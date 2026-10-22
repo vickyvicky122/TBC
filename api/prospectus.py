@@ -24,6 +24,95 @@ FIELD_HINTS = {
 SUPPORT_TYPES = ["funding", "credits", "venue", "mentors", "prizes"]
 
 
+def _indented_block(text: str, heading_re: str) -> list[str]:
+    lines = text.splitlines()
+    start = next((i + 1 for i, line in enumerate(lines) if re.search(heading_re, line, re.IGNORECASE)), None)
+    if start is None:
+        return []
+    items: list[str] = []
+    buf: list[str] = []
+
+    def flush() -> None:
+        chunk = " ".join(buf).strip()
+        if chunk:
+            items.append(chunk)
+        buf.clear()
+
+    for line in lines[start:]:
+        stripped = line.strip()
+        if not stripped:
+            flush()
+            continue
+        if not line[:1].isspace() and not stripped.startswith(("-", "•")):
+            flush()
+            break
+        piece = stripped.lstrip("-•").strip()
+        if buf and buf[-1].endswith((".", "!", "?")) and piece[:1].isupper():
+            flush()
+        buf.append(piece)
+    flush()
+    return items
+
+
+def _leading_sentences(text: str, start_re: str, stop_re: str) -> list[str]:
+    lines = text.splitlines()
+    start = next((i for i, line in enumerate(lines) if re.search(start_re, line, re.IGNORECASE)), None)
+    if start is None:
+        return []
+    end = next(
+        (i for i in range(start + 1, len(lines)) if re.search(stop_re, lines[i].strip(), re.IGNORECASE)),
+        len(lines),
+    )
+    items: list[str] = []
+    buf: list[str] = []
+
+    def flush() -> None:
+        chunk = " ".join(buf).strip()
+        if chunk:
+            items.append(chunk)
+        buf.clear()
+
+    for line in lines[start:end]:
+        stripped = line.strip()
+        if not stripped:
+            flush()
+            continue
+        if buf and stripped[:1].islower():
+            buf.append(stripped)
+            continue
+        flush()
+        buf.append(stripped)
+    flush()
+    return items
+
+
+def _collapse_letter_spacing(text: str) -> str:
+    """Join PDF text that was extracted as one glyph per space."""
+    collapsed: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        tokens = stripped.split(" ")
+        nonempty = [token for token in tokens if token]
+        singles = [token for token in nonempty if len(token) == 1]
+        if len(nonempty) < 4 or len(singles) / len(nonempty) < 0.55:
+            collapsed.append(line)
+            continue
+        indent = line[: len(line) - len(line.lstrip(" "))]
+        words: list[str] = []
+        current: list[str] = []
+        for token in tokens:
+            if token == "":
+                if current:
+                    words.append("".join(current))
+                    current = []
+                continue
+            current.append(token)
+        if current:
+            words.append("".join(current))
+        collapsed.append(indent + " ".join(words))
+    return "\n".join(collapsed)
+
+
 def extract_pdf_text(data: bytes) -> str:
     reader = PdfReader(BytesIO(data))
     pages = []
@@ -33,6 +122,7 @@ def extract_pdf_text(data: bytes) -> str:
 
 
 def parse_prospectus(text: str) -> ParseResult:
+    text = _collapse_letter_spacing(text)
     lowered = text.lower()
     extracted: dict = {}
 
@@ -69,7 +159,9 @@ def parse_prospectus(text: str) -> ParseResult:
     if deadline:
         extracted["applicationDeadline"] = deadline.group(1).strip()
 
-    extracted["supportRequested"] = [s for s in SUPPORT_TYPES if s in lowered]
+    extracted["supportRequested"] = [
+        s for s in SUPPORT_TYPES if s in lowered or (s == "funding" and "financial" in lowered)
+    ]
 
     tracks = []
     for line in text.splitlines():
@@ -84,7 +176,8 @@ def parse_prospectus(text: str) -> ParseResult:
 
     purpose = re.search(r"is a[^\n]{20,220}", text, re.IGNORECASE)
     if purpose:
-        extracted["purpose"] = purpose.group(0).strip()
+        sentence = re.sub(r"^is a\s+", "", purpose.group(0).strip(), flags=re.IGNORECASE)
+        extracted["purpose"] = sentence[:1].upper() + sentence[1:] if sentence else sentence
 
     community = re.search(r"Organised by ([^\n.]+)", text, re.IGNORECASE)
     if community:
@@ -117,6 +210,10 @@ def parse_prospectus(text: str) -> ParseResult:
         elif in_benefits and line.strip() and not line.startswith(" "):
             if benefits:
                 break
+    if not benefits:
+        benefits = _indented_block(text, r"benefits")
+    if not benefits:
+        benefits = _leading_sentences(text, r"promote your brand", r"^(what is|forget candlelit)")
     if benefits:
         extracted["benefitsOffered"] = benefits
 

@@ -10,12 +10,12 @@ function hashName(name: string) {
 }
 
 const PALETTES = [
-  ["#050882", "#efebe3", "#e24b24"],
-  ["#161616", "#efebe3", "#9aa6ff"],
-  ["#e24b24", "#fffcf7", "#050882"],
-  ["#1c1460", "#c5c8f2", "#efebe3"],
-  ["#0b0b2a", "#efebe3", "#e24b24"],
-  ["#050882", "#e24b24", "#fffcf7"],
+  ["#4e9cff", "#161616", "#ff5d5f"],
+  ["#161616", "#efebe3", "#4e9cff"],
+  ["#ff5d5f", "#fffcf7", "#4e9cff"],
+  ["#12407f", "#d8e9ff", "#efebe3"],
+  ["#0a1e3d", "#efebe3", "#ff5d5f"],
+  ["#4e9cff", "#161616", "#ff5d5f"],
 ];
 
 export function initials(name: string) {
@@ -41,7 +41,7 @@ export function Monogram({
         alt=""
         width={size}
         height={size}
-        className="rounded-full object-cover"
+        className="rounded-full object-contain"
         style={{ width: size, height: size }}
       />
     );
@@ -79,25 +79,23 @@ export function Monogram({
   );
 }
 
-export function LogoMark({ size = 36, withDots = true }: { size?: number; withDots?: boolean }) {
-  const text = Math.max(9, size * 0.28);
+const LOGO_SRC = "/brand/logo.png";
+const LOGO_RATIO = 256 / 161;
+
+export function LogoMark({ size = 36, withName = true }: { size?: number; withName?: boolean }) {
+  const height = size;
+  const width = Math.round(size * LOGO_RATIO);
   return (
-    <span className="inline-flex items-center gap-2">
-      <span
-        className="grid place-items-center rounded-full bg-ink text-paper"
-        style={{ width: size, height: size }}
-      >
-        <span className="font-semibold tracking-tight" style={{ fontSize: text }}>
-          TBC
-        </span>
-      </span>
-      {withDots ? (
-        <span className="flex items-center gap-1" aria-hidden>
-          <i className="pulse-dot bg-ink" />
-          <i className="pulse-dot bg-ink" />
-          <i className="pulse-dot bg-orange" />
-        </span>
-      ) : null}
+    <span className="inline-flex items-center gap-2.5">
+      <img
+        src={LOGO_SRC}
+        alt=""
+        width={width}
+        height={height}
+        className="block shrink-0"
+        style={{ width, height }}
+      />
+      {withName ? <span className="display text-[1.35rem] leading-none text-ink">TBC.</span> : null}
     </span>
   );
 }

@@ -192,6 +192,7 @@
     {
       "id": "cognee",
       "name": "Cognee",
+      "logoData": "/sponsors/cognee.png",
       "kind": "technology",
       "source": "Grok Bot Community Engineering London Hackathon technology partner",
       "sourceConfirmed": true,
@@ -235,6 +236,7 @@
     {
       "id": "cursor",
       "name": "Cursor",
+      "logoData": "/sponsors/cursor.jpg",
       "kind": "technology",
       "source": "Grok Bot Community Engineering London Hackathon technology partner",
       "sourceConfirmed": true,
@@ -362,6 +364,7 @@
     {
       "id": "spacexai",
       "name": "SpaceXAI (Grok Bot)",
+      "logoData": "/sponsors/spacexai.png",
       "kind": "technology",
       "source": "Grok Bot Community Engineering London Hackathon technology partner",
       "sourceConfirmed": true,
